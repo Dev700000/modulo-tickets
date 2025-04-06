@@ -1,0 +1,18 @@
+<odoo>
+    <!-- Acción para abrir la vista de tickets -->
+    <record id="action_ticket" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">tickets2</field>
+        <field name="view_mode">form,kanban,list</field>
+        <field name="view_id" ref="view_ticket_list"/>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Menú principal para los tickets -->
+    <menuitem id="menu_ticket_root" name="Mis tickets 2" sequence="1"/>
+
+    <!-- Submenú para acceder a los tickets -->
+    <menuitem id="menu_ticket" name="Tickets 2"
+              parent="menu_ticket_root"
+              action="action_ticket" sequence="10"/>
+</odoo>
